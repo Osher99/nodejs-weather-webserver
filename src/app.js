@@ -81,9 +81,10 @@ app.get('/products', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.send({
+    res.render('help', {
         title: 'About Page',
         description: 'Weather app built and running',
+        name: 'Osher Dror'
     });
 });
 

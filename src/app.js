@@ -50,7 +50,7 @@ geocode(req.query.address, (error, { latitude = 0, longtitude = 0, location = ''
         return;
     } 
     forecast(latitude, longtitude,
-         (error, {description, tempature}) => {
+         (error, {description, tempature, windSpeed, windDegree}) => {
             if (error) {
                 res.send({
                     error: error.toString()
@@ -59,7 +59,12 @@ geocode(req.query.address, (error, { latitude = 0, longtitude = 0, location = ''
              }
 
              res.send({
-                forecast: 'The weather in ' + location + ' is ' + description + ' and the tempature is ' + tempature + ' Celsuis',
+                forecast: 'The weather in ' + 
+                location + ' is ' + 
+                description + ' and the tempature is ' 
+                + tempature + ' Celsuis' 
+                + '\nWind\'s speed is ' 
+                + windSpeed + ' and the wind\'s degree is ' + windDegree,
                 location: location,
                 address: req.query.address 
             });

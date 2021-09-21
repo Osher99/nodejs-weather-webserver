@@ -62,7 +62,7 @@ geocode(req.query.address, (error, { latitude = 0, longtitude = 0, location = ''
                 forecast: 'The weather in ' + 
                 location + ' is ' + 
                 description + ' and the tempature is ' 
-                + tempature + ' Celsuis' 
+                + tempature + ' Celsuis\n' 
                 + '\nWind\'s speed is ' 
                 + windSpeed + ' and the wind\'s degree is ' + windDegree,
                 location: location,

@@ -17,7 +17,7 @@ weatherForm.addEventListener('submit', (e) => {
         messageOne.textContent = 'Search need to be more specific!';
      }
 
-    const urlWeather = 'http://localhost:3000/weather?address=' + locationChosen;
+    const urlWeather = '/weather?address=' + locationChosen;
 
 fetch(urlWeather).then((res) => {
     res.json().then((data) => {

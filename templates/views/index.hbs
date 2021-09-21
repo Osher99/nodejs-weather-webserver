@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/styles.css">
+<link rel="icon" href="./img/weather.png">
+</head>
+<body>
+    <div class="main-content">
+    {{>header}}
+    <p>Use this to get yout weather!</p>
+
+    <form>
+        <input placeholder="Location" type="text">
+        <button>Search</button>
+    </form>
+             <button onclick="clearData(event)" class="clearData">Clear</button>
+
+
+    <p id="message-one"></p>
+    <p id="message-two"></p>
+    
+    </div>
+    {{>footer}}
+    <script src="./js/app.js"></script>
+</body>
+</html>
